@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
             priceMessage = createOrderSummary();
         Intent intent = new Intent(Intent.ACTION_SENDTO);
         intent.setData(Uri.parse("mailto:")); // only email apps should handle this
-        intent.putExtra(Intent.EXTRA_EMAIL,  new String[] {"krittikachhabra1998@gmail.com"});
+        intent.putExtra(Intent.EXTRA_EMAIL,  new String[] {"//insert reciever's email ID here"});
         intent.putExtra(Intent.EXTRA_SUBJECT, "JustJava order for "+getName());
         intent.putExtra(Intent.EXTRA_TEXT, priceMessage);
         if (intent.resolveActivity(getPackageManager()) != null) {
